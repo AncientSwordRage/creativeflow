@@ -1,0 +1,35 @@
+{%extends "base.html"%}
+{%block sidebar%}
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a href="#">
+               Creative Flow
+            </a>
+        </li>
+        <nav>
+        {%for section in pages%}
+            {% if section.type == 'categories'%}
+            <div>
+                <li>
+                    <a href="#{{section.name}}">{{section.name}}</a>
+                </li>
+            </div>
+            {% elif section.type == 'date' %}
+            <div>
+                <li>
+                    <a href="#{{section.name}}">{{section.name}}</a>
+                </li>
+            </div>
+            {% elif section.type == 'social'%}
+            <div>
+                <li>
+                    <a href="#{{section.name}}">{{section.name}}</a>
+                </li>
+            </div>
+            {% endif %}
+        {%endfor$}
+        </nav>
+    </ul>
+</div>
+{%endblock%}

@@ -1,0 +1,146 @@
+body > header{
+	width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    height: 8em;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+}
+body{
+	/*background-color: hsla(300, 70%, 80%, 1)*/
+}
+@media screen and (min-width: 768px){
+	.sidebar-wrapper{
+	    height: calc(100vh - 5em);
+	    width:16.666666667%;
+	}
+	.menu-wrapper{
+		height: calc(100vh - 5em);
+	    width:83.33333333%;	
+	}
+}
+.primary-background {
+	background-color: hsla(330, 80%, 60%, 1);
+}
+.primary-text {
+	color: hsla(290, 50%, 30%, 1);
+}
+.sidebar-wrapper{
+	padding: 7px 0px;
+    margin: 0px;
+    background-color: hsla(330, 80%, 60%, 1);
+}
+
+.blog-wrapper{
+	padding: 2em 5em;
+    width: 80%;
+}
+
+.flexy {
+	display: flex;
+}
+
+.site-name{
+    width: 100%;
+    display: block;
+    text-align: center;
+    position: absolute;
+    margin: 0px;
+}
+.site-name::before,
+.site-name::after{
+	background-image: url('../img/logo.png');
+    content: "";
+    height: 80px;
+    width: 200px;
+    display: inline-block;
+    background-size: 200px 80px;
+    margin-top: 20px;
+}
+.navbar-menu{
+	background-color: hsl(300,85%,65%);
+}
+.navbar-menu li.nav-item a:hover,
+.navbar-menu li.nav-item a:focus,
+.navbar-menu li.nav-item a.active{
+	background-color: hsl(300,85%,60%);
+	border-color: unset;
+}
+
+.nav-tabs{
+	border-bottom: 1px solid hsl(115,75%,25%);
+    margin: 0px -15px;
+}
+.nav-tabs li a{
+	font-weight: 600;
+	margin-right: -1px;
+}
+
+.nav-tabs   li.nav-item.active a, 
+.nav-tabs   li.nav-item a:hover,
+.nav-tabs   li.nav-item a:focus{
+	background-color: hsl(50,85%,60%);
+	border-color: unset;
+	border-radius: unset;
+}
+.category-type-header{
+	color: hsl(0,5%,75%);
+	margin-left:5px;
+}
+.main-text{
+	font-weight: 700;
+    font-size: 4em;
+    line-height: 2em;
+}
+.detail-text{
+	color: hsl(0,75%,25%);	
+}
+nav .active{
+	border-bottom: 2px solid orange;
+}
+
+a.detail-text:hover,
+a.detail-text:focus{
+	color: hsl(0,75%,25%);	
+}
+ul.sidebar-nav{
+	padding:0px;
+}
+ul.dropdown-menu{
+	background-color: hsla(330,80%,50%,1);
+	margin: 0px;
+}
+ul.dropdown-menu a:focus,
+ul.dropdown-menu a:hover{
+	background-color: hsla(330,80%,45%,1);
+}
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+li.sidebar-item{
+	list-style-type: none;
+	padding:0px 25px;
+}
+
+li.sidebar-item:hover{
+	background-color: hsla(330,80%,50%,1);
+}
+li.sidebar-item a,
+li.sidebar-item:hover a{
+	color:white;
+	text-decoration: none;
+}
+
+#main-page-mahal{
+	    height: 25em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.telephone{
+	color: red;
+    font-weight: 600;
+    font-size: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

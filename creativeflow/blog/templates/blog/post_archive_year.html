@@ -1,0 +1,22 @@
+{% extends "blog/post_lists.html" %}
+{% load blog_tags %}
+{% block post_list %}
+<div class="page-header">
+    <p> Blog List - posts between {{date_list|first_date|date:"F j, Y"}} and {{date_list|last_date|date:"F j, Y"}}</p>
+</div>
+{% for blog in object_list %}
+    <div class="blog-card panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{blog.title}} - {{blog.published}}</h3>
+        </div>
+        <div class="panel-body">
+            <p>{{blog.body|linebreaks}}<p>
+        </div>
+        <div class="panel-footer">
+            <footer>Written by {{blog.author}}</footer>
+        </div>
+    </div>
+{% empty %}
+    <p>Nothing to see</p>
+{% endfor %}
+{% endblock post_list %}

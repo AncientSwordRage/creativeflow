@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load blog_tags %}
+{% block content %}
+    <main class="flexy">
+        <div class="sidebar-wrapper col-md-2 col-xs-12">
+            <h3>Posts by Date</h3>
+            <ul class="sidebar-nav dates">
+                {% transformed_dates as postdates %}
+                <li class = "sidebar-item dropdown">
+                    <a href="/posts">All posts</a>
+                </li>
+                {% for dates in postdates %}
+                <li class = "sidebar-item dropdown">
+                    <a href="/posts/{{dates.year}}" class="dropdown-toggle" id="dropdownMenu{{dates.year}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">{{dates.year}}</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu{{dates.year}}">
+                        {% for month in dates.months %}
+                        <li>
+                            <a href="/posts/{{dates.year}}/{{month.num}}">{{month.name}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {%endfor%}
+            </ul>
+            <h3>Social Media Links</h3>
+            <ul class="sidebar-nav social">
+                {% social_media as social_media_links %}
+                {% for site in social_media_links %}
+                <li class = "sidebar-item">
+                    <a href="{{site.url}}">{{site.name}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="blog-wrapper">
+            {% block post_list %}
+            {% endblock %}
+        </div>
+    </main>
+{% endblock content %}

@@ -1,0 +1,13 @@
+TODO
+
+ - upload to git
+ - install mark-down-deux
+ - set up markdown/pagedown
+
+ Actual website stuff:
+	homepage
+	blog detail page
+
+Deployment
+ - upload to git
+ - deployment checklist on django
