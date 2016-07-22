@@ -10,4 +10,7 @@ TODO
 
 Deployment
  - upload to git
- - deployment checklist on django
+ - read deployment checklist on django
+ - checkout on PA
+ - follow deployment
+ - redirect from gandi
