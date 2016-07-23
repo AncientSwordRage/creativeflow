@@ -25,7 +25,10 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'blog', 'static'),
 # SECRET KEY gitignored
 SECRET_KEY = KEY
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['webapp-206115.pythonanywhere.com',
+                 'creativeflow.org.uk', 
+                 'www.creativeflow.org.uk', 
+                 'blog.creativeflow.org.uk']
 
 
 # Application definition
